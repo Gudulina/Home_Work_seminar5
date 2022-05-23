@@ -8,7 +8,6 @@ double[] Massiv()
         arr[i] = new Random().Next(1, 100);
     }
     return arr;
-    Console.Write(arr);
 }
 
 void Print(double[] arr)
@@ -25,9 +24,9 @@ void Print(double[] arr)
 void MinMax(double[] arr)
 {
     int size = arr.Length;
-    int index = 0;
-    double Min = arr[index];
-    double Max = arr[index];
+    int i = 0;
+    double Min = arr[i];
+    double Max = arr[i];
     double Diff = 0;
     
     for (int index = 0; index < size; index++)
@@ -35,10 +34,10 @@ void MinMax(double[] arr)
         if (arr[index] < Min)
             Min = arr[index];
         if (arr[index] > Max)
-            Max = arr[index];
-        Diff = Max - Min;
-        Console.WriteLine($"Разница между Max и Min: {Diff}");
+            Max = arr[index];        
     }
+    Diff = Max - Min;
+    Console.WriteLine($"Разница между Max и Min: {Diff}");
 }
 
 double[] arr_1 = Massiv();
